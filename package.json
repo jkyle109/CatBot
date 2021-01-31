@@ -1,0 +1,28 @@
+{
+  "name": "catbot",
+  "version": "1.0.0",
+  "description": "C.A.T",
+  "main": "cat.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node cat.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkyle109/CatBot.git"
+  },
+  "keywords": [
+    "cat"
+  ],
+  "author": "Jonathan Edey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkyle109/CatBot/issues"
+  },
+  "homepage": "https://github.com/jkyle109/CatBot#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0"
+  }
+}
