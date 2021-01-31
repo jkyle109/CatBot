@@ -44,7 +44,7 @@ client.on("message", (message) => {
         sendCatPic(message);
         return;
     } else if (message.content.toLowerCase().includes("cat")) {
-        message.reply("meow");
+        message.channel.send("meow");
         return;
     }
 });
