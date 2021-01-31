@@ -7,8 +7,7 @@ const client = new Discord.Client();
 const prefix = process.env.PREFIX;
 const token = process.env.TOKEN;
 const key = process.env.CAT_API_KEY;
-
-const sadge = client.emojis.cache.get("736434669364576347");
+const owner = process.env.BOT_OWNER;
 
 sendCatPic = async (message) => {
     try {
@@ -25,13 +24,20 @@ sendCatPic = async (message) => {
         message.reply({ files: [url] });
     } catch (err) {
         console.log(err);
-        message.channel.send(
-            "C.A.T.exe has stopped working. " + sadge.toString()
-        );
+        message.channel.send("C.A.T.exe has stopped working.");
     }
 };
 
 client.on("ready", () => {
+    client.user.setPresence({
+        status: "online",
+        activity: {
+            name: "cat videos...",
+            type: "WATCHING",
+        },
+    });
+    const user = await client.users.fetch(owner)
+    user.send("I'm Ready!")
     console.log("I'm Ready!");
 });
 
