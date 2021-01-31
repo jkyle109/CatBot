@@ -28,7 +28,7 @@ sendCatPic = async (message) => {
     }
 };
 
-client.on("ready", () => {
+client.on("ready", async () => {
     client.user.setPresence({
         status: "online",
         activity: {
@@ -36,8 +36,8 @@ client.on("ready", () => {
             type: "WATCHING",
         },
     });
-    const user = await client.users.fetch(owner)
-    user.send("I'm Ready!")
+    const user = await client.users.fetch(owner);
+    user.send("I'm Ready!");
     console.log("I'm Ready!");
 });
 
