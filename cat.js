@@ -42,6 +42,10 @@ client.on("message", (message) => {
 
     if (message.content.toLowerCase().startsWith(prefix + "cat")) {
         sendCatPic(message);
+        return;
+    } else if (message.content.toLowerCase().includes("cat")) {
+        message.reply("meow");
+        return;
     }
 });
 
